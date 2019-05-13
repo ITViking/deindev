@@ -26,7 +26,7 @@
 
     .introduction-container {
         display: flex;
-        background-image: url(~assets/face.png);
+        background-image: linear-gradient(150deg, rgba(10, 36, 99, 0.65), rgba(57, 100, 201, 0.4) 80%), url(~assets/face.png);
         background-size: cover;
         height: 100vh;
         padding: 0;
@@ -63,7 +63,6 @@
 
     .overlay {
         display: flex;
-        background-color: rgba(10, 36, 99, 0.5);
         width: 100vw;
         z-index: 2;
     }

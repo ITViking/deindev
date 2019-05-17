@@ -1,20 +1,22 @@
 <template>
     <main>
         <div class="introduction-container">
-            <div class="overlay">
-                <div class="logo">
-                    <h1>DeinDev</h1>
-                    <h3>a freelancing fullstack web developer</h3>
-                </div>
-                <div class="introduction-text">
-                    <h2>Hi, I'm Philip</h2>
-                    <h1>Let's make your idea see the light of day!</h1>
-                </div>
+            <navigation></navigation>
+            <div class="introduction-text">
+                <h2>Hi, I'm Philip</h2>
+                <h1>Let's make your idea see the light of day!</h1>
             </div>
-
         </div>
     </main>
 </template>
+
+<script>
+import Navigation from '~/components/navigation';
+
+export default {
+    components: { Navigation }
+}
+</script>
 
 <style lang="scss">
 
@@ -26,7 +28,7 @@
 
     .introduction-container {
         display: flex;
-        background-image: linear-gradient(120deg, rgba(10, 36, 99, 0.5), rgba(57, 100, 201, 0.5) 50%), url(~assets/face.png);
+        background-image: linear-gradient(120deg, rgba(10, 36, 99, 0.5), rgba(57, 100, 201, 0.5) 50%), url(~assets/gimpFace.jpg);
         background-size: cover;
         height: 100vh;
         padding: 0;
@@ -36,6 +38,7 @@
         display: flex;
         align-self: center;
         flex-direction: column;
+        width: 100vw;
 
         h1 {
             margin: 5px;
@@ -46,25 +49,4 @@
             margin: 5px;
         }
     }
-
-    .logo {
-        margin: 20px;
-
-        h1 {
-            margin: 5px;
-            font-weight: 300;
-        }
-
-        h3 {
-            font-weight: 200;
-            margin: 5px;
-        }
-    }
-
-    .overlay {
-        display: flex;
-        width: 100vw;
-        z-index: 2;
-    }
-
 </style>
